@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0%;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+    font-family:'Long Cang', cursive;
+}
+
+.main_div{
+
+    width:100vw;
+    height:100vh;
+    background-color:#f6f6f6;
+    display:grid;
+    place-items: center;
+}
+
+.music_container{
+    width:35rem;
+    height:55rem;
+    background-color:#ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,02);
+    padding: 3rem;
+    text-align:center;
+}
+
+.music_container #title{
+
+    text-transform:uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing:0.5rem;
+    color:#171717;
+    margin:2rem 0 0.5rem 0;
+    font-size:50px;
+    text-shadow:0 0.3rem 0.5rem rgba(0,0,0,0.3);
+}
+
+.img_container{
+
+    width:25rem;
+    height:25rem;
+    margin:auto;
+}
+
+img{
+    /* ek div ke under dusre div ka content ke liye*/
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border-style:solid;
+    border-color:black;
+    object-fit:cover;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+}
+
+.music_controls{
+    width:20rem;
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-top:1rem;
+    align-items:center;
+}
+
+.music_controls .fas{
+    color:#111111;
+    font-size:2 rem;
+    cursor:pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4))
+
+}
+.music_container .main-button{
+    width:5rem;
+    heigth:5rem;
+    border-radius:50%;
+    background-color:#111;
+    color:#f6f6f6;
+    /* and display flex to center the icon */
+    display:flex;
+    justify-content: center;
+    font-size:1.4rem;
+}
+
+.music_controls .fas:hover{
+    color:grey;
+    
+}
+
+.music_container .fa-play:hover{
+    background-color:#111;
+    color:#f6f6f6;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+/*add anime class to animate */
+
+.anime{
+    animation:rotatePlayer 4s linear infinite;
+}
+
+@keyframes rotatePlayer{
+
+    from{
+        transform:rotate(0deg)
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+/*progress style*/
+.progressbar_container{
+    width:100%;
+    height:auto;
+    padding:1rem 0;
+    margin-top: 1rem;
+}
+
+.progress_div{
+    width:100%;
+    height:0.5rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+
+    border-radius:4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    transition:width is linear;
+    -moz-transition: width is linear;
+    -o-transition: width is linear;
+    -webkit-transition: width is linear;
+    cursor:pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress{
+
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:20%;
+    height:100%;
+    background-color:black;
+    border-radius:4rem;
+    transition:all is linear;
+    -moz-transition: all is linear;
+    -o-transition: all is linear;
+    -webkit-transition: all is linear;
+    cursor:pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    
+}
+
+.progress_duration_meter{
+    display:flex;
+    justify-content:space-between;
+    font-size:1.2rem ;
+    font-style: solid;
+}
+
+#name{
+    text-align:center;
+    margin-top: 25px;
+    
+}
